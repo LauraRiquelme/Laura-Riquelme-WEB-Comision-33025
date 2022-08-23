@@ -26,7 +26,8 @@ h1{
 }
 
 body{
-    background-color:  #ffc8dd}
+    background: linear-gradient(45deg,white, pink, white)
+}
 
 img{
     border: 3px double darkmagenta;
@@ -66,15 +67,19 @@ nav a{
     grid-template-columns: (5,200px);
     font-size: 20px;
     display: inline;
-    background-color:antiquewhite;
-    padding-left: 70px;
-    padding-right: 70px;
+    background-color: #ffd6ff;
     margin-right: 3px;
-    
     color: black;
     text-decoration: none;
+    text-align: center;
+
 }
 
+nav a:hover{
+    transform: scale(1.05);
+    background-color: #ff99c8;
+    transition: all 0.5s;
+}
 
         /*   -----  Index -----   */
 
@@ -97,6 +102,7 @@ nav a{
     text-align: center;
     margin-bottom: 120px;
 }
+
 
       /* ----- Sobre Mi -----  */
 
@@ -152,7 +158,22 @@ nav a{
 .imgSobreMi1,.imgSobreMi2{
     width: 400px;
     justify-self: center;
+    animation-name: animacionImgSobreMi;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
 }
+
+@keyframes animacionImgSobreMi {
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);        
+    }
+    
+}
+
 
 .titulo1,.titulo2{
     font-size: 30px;
@@ -161,6 +182,10 @@ nav a{
 .parrafo1,.parrafo2{
     font-size: 25px;
 }
+
+
+
+
 /* media queries*/
 
 @media screen and (max-width: 320px) {
