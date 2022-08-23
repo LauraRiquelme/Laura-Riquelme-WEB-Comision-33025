@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "GreatVibes-Regular";
+    src: url("./fonts/GreatVibes-Regular.otf");
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("./fonts/Poppins-Light.ttf");
+}
+
+/* ---- Estilos de h1,h3,h4,body,imagenes para todas las paginas ---- */
+h1{
+    font-family: "GreatVibes-Regular";
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #f72585;
+    text-align: center;
+    font-size: 50px; 
+    margin-top: 0;
+}
+
+body{
+    background-color:  #ffc8dd}
+
+img{
+    border: 3px double darkmagenta;
+    padding: 5px;
+}
+
+h3{
+    font-family: "GreatVibes-Regular";
+    text-align: center;
+    font-size: 35px;
+    text-decoration-line: underline;
+    padding-top: 20px;
+}
+h4{
+    font-size: 20px;
+}
+
+
+        /* ----- Menu ----- */
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    justify-content: center;
+}
+
+nav a{
+    grid-template-columns: (5,200px);
+    font-size: 20px;
+    display: inline;
+    background-color:antiquewhite;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-right: 3px;
+    
+    color: black;
+    text-decoration: none;
+}
+
+
+        /*   -----  Index -----   */
+
+.frase{
+    margin-left: 400px;
+    margin-right: 400px;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: pink 2px 2px 2px;
+    color:black;
+    background-image: url("./img/fondo.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 1050px;
+
+}
+
+.imgIndex{
+    text-align: center;
+    margin-bottom: 120px;
+}
+
+      /* ----- Sobre Mi -----  */
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 50px;
+}    
+
+
+.gridSobreMi{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2,2fr);
+    grid-template-rows: 30px 300px 30px 300px;
+    grid-template-areas: 
+    "title1 title1"
+    "foto1 parrafos1"
+    "title2 title2"
+    "parrafos2 foto2"
+    ; 
+    align-items: center;
+}
+
+
+.titulo1{
+    grid-area: title1;
+    padding-bottom: 50px;
+}
+.imgSobreMi1{
+    grid-area: foto1;
+   
+}
+.parrafo1{
+    grid-area: parrafos1;
+    margin-right: 50px;
+    
+}
+.titulo2{
+    grid-area: title2;
+    padding-top: 100px;
+}
+.imgSobreMi2{
+    grid-area: foto2;
+  
+}
+.parrafo2{
+    grid-area: parrafos2;
+    padding-right: 50px;
+}
+
+.imgSobreMi1,.imgSobreMi2{
+    width: 400px;
+    justify-self: center;
+}
+
+.titulo1,.titulo2{
+    font-size: 30px;
+}
+
+.parrafo1,.parrafo2{
+    font-size: 25px;
+}
+/* media queries*/
+
+@media screen and (max-width: 320px) {
+    h1{
+        font-family: "GreatVibes-Regular";
+        background-color: black;
+        color: #f72585;
+        text-align: center;
+        font-size: 30px;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    nav{
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+        row-gap: 5px;
+    }
+    
+    nav a{
+        font-size: 20px;
+        display: inline;
+        background-color:antiquewhite;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        align-self: center;
+    }
+
+    /*    Index   */
+    
+    .imgIndex img{
+        width: 100%;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    .frase{
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        color: black;
+        position: absolute;
+        top: 600px;
+    }
+/*    Sobre Mi    */
+
+.contenido{
+    padding: 0;
+    margin: 5px;
+}
+
+h3{
+    padding: 0;
+    margin: 0;
+}
+
+    .gridSobreMi{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-around;
+            
+    }
+    
+    .imgSobreMi1,.imgSobreMi2{
+        width: 300px; 
+        align-self: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .titulo1,.titulo2{
+        font-size: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .parrafo1,.parrafo2{
+        font-size: 20px;
+        padding: 5px; 
+    }
+
+
+    footer{
+        font-family: "GreatVibes-Regular";
+        text-align: right;
+        color: #f72585;
+        background-color: black;
+        margin-top: 10px;
+    }
+    
+}
+
+        /* ----- Galeria  -----*/
+
+
+
+/*  ----- Contacto -----  */
+
+.imgFondo{
+    background-image: url("./img/The\ Roses\ 2.jpg");
+    background-position: center;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.map{
+    margin-left: 150px;
+    margin-top: 30px;
+    position: relative;
+    bottom: 80px;
+}
+
+.map iframe{
+    width: 250px;
+    height: 250px;
+}
+
+h4{
+    padding-top: 10px ;
+}
+
+.redes div img{
+    border: none;
+}
+.redes div{
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.redes h4{
+    text-align: center;
+}
+
+   /*  -----  Servicios  -----  */
+
+.listaMakeUp p{
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.listaServicios p{
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.listaServicios video{
+    text-align: center;
+}
+.imgMakeUp{
+    margin-left: 20px;
+}
+.imgMakeUp img{
+    margin-left: 10px;
+}
+
+.divVideo{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.imgPosAb img{
+    width: 500px;
+    position: absolute;
+    top: 390px;
+    left: 730px;
+}
+
+.videoPosAb video{
+    height: 550px;
+    position: absolute;
+    top: 950px;
+    left: 800px;
+align-items:center;
+}
+video{
+    border: 3px double darkmagenta;
+    padding: 5px;
+}
+/*  --- Footer---   */
+
+footer{
+    font-family: "GreatVibes-Regular";
+    text-align: right;
+    color: #f72585;
+    background-color: black;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
