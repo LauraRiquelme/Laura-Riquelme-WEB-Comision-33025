@@ -4,80 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    
     <title>The Roses: Servicios</title>
 </head>
 <body>
     <header>
-        <h1>
-            The Roses: MakeUp & HairStyle
-        </h1>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="./sobre_mi.html">Sobre mi</a>
-            <a href="./galeria.html">Galeria</a>
-            <a href="./servicios.html">Servicios</a>
-            <a href="./contacto.html">Contacto</a>
-        </nav>
-        
+        <nav class="navbar navbar-expand-lg"style="background-color: #ff99c8;">
+            <div class="container-fluid">
+                <img class="logo" src="../img/logo.jpg" alt="">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                  <a class="nav-link active" aria-current="page" href="../pages/sobre_mi.html">Sobre Mi</a>
+                  <a class="nav-link active" aria-current="page" href="../pages/galeria.html">Galeria</a>
+                  <a class="nav-link active" aria-current="page" href="../pages/servicios.html">Servicios</a>
+                  <a class="nav-link active" aria-current="page" href="../pages/contacto.html">Contacto</a>
+                </div>
+              </div>
+            </div>
+          </nav>
     </header>
 
     <h3>Servicios</h3>
 
     <section  class="listaServicios">
         <article>
-            <h4>Lavado</h4> 
-            <p>Lavarte el cabello previo a un corte o peinado y/o luego de una coloración:</p>
-            <p> hace al inicio y/o la finalización perfecta de tu experiencia en The Roses</p>
             
-            <h4>Corte</h4>
+            <div class="textoGrid1">
+                        
+                <h4>Corte</h4>
             <p>Voy a asesorarte y hacer lucir tu pelo con el look ideal!</p> 
             <p>El pelo es el accesorio más importante que tenemos.</p>
             
-            <h4>Peinado</h4> 
+                <h4>Peinado</h4> 
             <p>Veni y llevate tu peinado, Brushing, planchitas, ondas, y muchos más.</p>
             
-            <h4>Coloración</h4> 
+                <h4>Coloración</h4> 
             <p>Te asesoro de una manera minuciosa para poder aconsejarte sobre qué es lo que tu cabello necesita. Cuáles son los pasos que llevara tu pelo para llegar al objetivo que deseas. Mi misión fundamental es mantener tu pelo sano y que luzca intacto, garantizando tu felicidad absoluta.</p>
-            
+                
+            </div>
+            <img class="gridImg" src="/img/Sesion Jess Staff.jpg" alt="">
+
+            <div class="presupuestoGrid">
+                <h4>Lavado</h4> 
+            <p>Lavarte el cabello previo a un corte o peinado y/o luego de una coloración:</p>
+            <p> hace al inicio y/o la finalización perfecta de tu experiencia en The Roses</p>
             <h4>Tratamientos</h4>
             <p>Keratina, Brillo, Hidratación, Nutrición, Reparación y Reconstrucción.</p>
-            
-            <h4>Presupuestos estimados</h4>
+
+                <h4 class="presupuestoTitulo">Presupuestos estimados</h4>
                 <table border="1">
-                    <tr>
-                        <th>Servicio</th>
-                        <th>Cabello corto</th>
-                        <th>Cabello medio</th>
-                        <th>Cabello largo</th>
-                    </tr>
-                    <tr>
-                        <th>Lavado desde</th>
-                        <td>1500</td>
-                        <td>2000</td>
-                        <td>2500</td>
-                    </tr>
-                    <tr>
-                        <th>Tratamientos desde</th>
-                        <td>1000</td>
-                        <td>1500</td>
-                        <td>2000</td>
-                    </tr>
-                    
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Cabello corto</th>
+                            <th>Cabello medio</th>
+                            <th>Cabello largo</th>
+                        </tr>
+                        <tr>
+                            <th>Lavado desde</th>
+                            <td>1500</td>
+                            <td>2000</td>
+                            <td>2500</td>
+                        </tr>
+                        <tr>
+                            <th>Tratamientos desde</th>
+                            <td>1000</td>
+                            <td>1500</td>
+                            <td>2000</td>
+                        </tr>
+                        
                 </table>
+            </div>
+            <video class="videoGrid" controls muted loop autoplay src="/video/Hair Mute.mp4"></video>
         </article>
+
+        
+        
     </section>
- 
+    
     
     <section>
         <article  class="listaMakeUp">
-        <h4>MakeUp</h4>
-        <p>El maquillaje magnifica la belleza que ya existe</p>
-        <h4>Maquillaje social y artístico</h4>
-            <img src="/img/Sesion Jess Staff.jpg" alt="">
+            
+                <h4>MakeUp</h4>
+                <p>El maquillaje magnifica la belleza que ya existe</p>
+                <h4>Maquillaje social y artístico</h4>
+            
+        
+        <div class="galeriaMakeUpGrid">
             <img src="/img/MU 1+Anny.jpg" alt="">
             <img src="../img/0013.JPG" alt="">
             <img src="/img/Sandra.jpg" alt="">
+        </div>
             
         <h4>Clases de Automaquillaje</h4>
         <p>Aprende a destacar tus mejores rasgos faciales y a resaltar al máximo tu belleza</p>
@@ -86,15 +110,16 @@
         </article>
     </section>
     
-    <div class="imgPosAb"><img src="/img/Salon.jpg" alt=""></div>
-    <div class="videoPosAb"><video controls muted loop autoplay src="/video/Hair.mp4"></video></div>
+    
     
     
 
 
     <footer>
-        <p>The Roses: MakeUp & HairStyle</p>
-        <p>Copyright 2022</p> 
+        <span>The Roses: MakeUp & HairStyle</span>
+        <span>Copyright 2022</span> 
     </footer>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

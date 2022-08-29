@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Roses: MakeUp & HairSttyle</title>
-    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
 </head>
 <body>
     
@@ -13,28 +16,40 @@
         <h1>
             The Roses: MakeUp & HairStyle
         </h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="./pages/sobre_mi.html">Sobre mi</a>
-            <a href="./pages/galeria.html">Galeria</a>
-            <a href="./pages/servicios.html">Servicios</a>
-            <a href="./pages/contacto.html">Contacto</a>
-        </nav>
+        <nav class="navbar navbar-expand-lg"style="background-color: #ff99c8;">
+            <div class="container-fluid">
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                  <a class="nav-link active" aria-current="page" href="./pages/sobre_mi.html">Sobre Mi</a>
+                  <a class="nav-link active" aria-current="page" href="./pages/galeria.html">Galeria</a>
+                  <a class="nav-link active" aria-current="page" href="./pages/servicios.html">Servicios</a>
+                  <a class="nav-link active" aria-current="page" href="./pages/contacto.html">Contacto</a>
+                </div>
+              </div>
+            </div>
+          </nav>
         
     </header>
 
-<div>
-    <div class="imgIndex">
+
+<div class="imgIndex">
         <img src="./img/01 index.jpg" alt="">
-    </div>
     
+</div>
     <p class="frase">Una estilista no es aquella que tiene un salon como un palacio, si no aquella que cuida tu cabello y piel asi como te respeta a ti y a tu tiempo.</p>
 
-    <footer>
-        <p>The Roses: MakeUp & HairStyle</p>
-        <p>Copyright 2022</p> 
-    </footer>
-</div>
+
+
+<footer>
+  <span>The Roses: MakeUp & HairStyle</span>
+  <span>Copyright 2022</span> 
+</footer>
     
+<script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
