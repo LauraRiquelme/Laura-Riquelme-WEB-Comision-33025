@@ -1,0 +1,584 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/***********************************************************/
+/* Estilos de h1,h3,h4,body,imagenes para todas las paginas*/
+/***********************************************************/
+
+@font-face {
+    font-family: "DancingScript-Bold";
+    src: url("../fonts/DancingScript-Bold.ttf");
+}
+@font-face {
+    font-family: "DancingScript-Regular";
+    src: url("../fonts/DancingScript-Regular.ttf");
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Light.ttf");
+}
+
+h1{
+    font-family: "DancingScript-Bold";
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #f72585;
+    text-align: center;
+    font-size: 50px; 
+    margin-top: 0;
+}
+
+body{
+    background: linear-gradient(pink, white,pink)
+}
+
+img{
+    border: 3px double darkmagenta;
+    padding: 5px;
+}
+
+h3{
+    font-family: "DancingScript-Regular";
+    text-align: center;
+    font-size: 35px;
+    text-decoration-line: underline;
+    padding-top: 20px;
+}
+h4{
+    font-size: 20px;
+}
+
+
+        /* ----- Menu ----- */
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+nav{
+    font-family: "DancingScript-Bold";
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+}
+nav div div{
+    display: flex;
+    justify-content: flex-end;
+   
+   
+}
+
+nav div div div a{
+    width: 130px;
+    height: 50px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+nav div div div a:hover{
+    transform: scale(1.05);
+    background-color:pink;
+    transition: all 0.5s;
+   
+}
+
+/**************************************************/
+/*                     Index                      */
+/**************************************************/
+
+.frase{
+    width: 700px;
+    font-family: "DancingScript-Bold";
+    font-size: 35px;
+    text-shadow: darkmagenta 2px 2px 2px;
+    color:black;
+    margin-left: 300px; 
+    text-align: center;  
+}
+
+.imgIndex{
+    text-align: center;
+}
+
+/**************************************************/
+/*                   Sobre Mi                     */
+/**************************************************/
+.contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 50px;
+}    
+
+
+.gridSobreMi{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2,2fr);
+    grid-template-rows: 30px 300px 30px 300px;
+    grid-template-areas: 
+    "title1 title1"
+    "foto1 parrafos1"
+    "title2 title2"
+    "parrafos2 foto2"
+    ; 
+    align-items: center;
+}
+
+
+.titulo1{
+    grid-area: title1;
+    padding-bottom: 50px;
+}
+.imgSobreMi1{
+    grid-area: foto1;
+   
+}
+.parrafo1{
+    grid-area: parrafos1;
+    margin-right: 50px;
+    
+}
+.titulo2{
+    grid-area: title2;
+    padding-top: 100px;
+}
+.imgSobreMi2{
+    grid-area: foto2;
+  
+}
+.parrafo2{
+    grid-area: parrafos2;
+    padding-right: 50px;
+}
+
+.imgSobreMi1,.imgSobreMi2{
+    width: 400px;
+    justify-self: center;
+    animation-name: animacionImgSobreMi;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animacionImgSobreMi {
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);        
+    }
+    
+}
+
+
+.titulo1,.titulo2{
+    font-size: 30px;
+}
+
+.parrafo1,.parrafo2{
+    font-size: 25px;
+}
+
+/**************************************************/
+/*                     Galeria                    */
+/**************************************************/
+
+.galeryComplited{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.galeryMU,.galeryColor{
+    display: flex;
+    margin: 30px;
+    width: 700px;
+}
+
+.galeryMU h4,.galeryColor h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "DancingScript-Bold";
+    font-size: 50px;
+    margin-right: 30px;
+   }
+
+/**************************************************/
+/*                   Servicios                    */
+/**************************************************/
+
+.listaServicios article{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-areas:
+    "gridTexto1 fotoGrid"
+    "gridVideo gridPresupuesto"
+    ;
+    gap: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.textoGrid1{
+    grid-area: gridTexto1;
+}
+
+.gridImg{
+    grid-area: fotoGrid;
+    width: 300px;
+    justify-self: center;
+}
+.presupuestoGrid{
+    grid-area: gridPresupuesto;
+}
+.videoGrid{
+    grid-area: gridVideo;
+    width: 300px;
+    justify-self: center;
+}
+
+.textoGrid1 h4,.textoGrid2 h4,.presupuestoGrid h4{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.presupuestoTitulo{
+    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-left: 120px;
+}
+presupuestoGrid{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+th, td{
+    text-align: center;
+}
+.listaMakeUp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.galeriaMakeUpGrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px; 
+    margin-bottom: 30px; 
+
+}
+.galeriaMakeUpGrid img{
+    width: 350px;
+}
+.galeriaMakeUpGrid img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.listaMakeUp h4,.listaMakeUp p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/**************************************************/
+/*                    Contacto                    */
+/**************************************************/
+
+.imgFondo{
+    background-image: url("../img/Salon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    text-align: center;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    margin-top: 350px;
+    margin-left: 20px;
+    gap: 20px;
+    width: 70%;
+}
+
+.redes div{
+    display: grid;
+    grid-template-columns: 100%;
+}
+.redes div div{
+    display: flex;
+    justify-content: center;
+}
+.redes div div a img{
+    border: none;
+    height: 50px; 
+}
+.redes div div a img:hover{
+    transform: scale(1.2);
+    box-shadow: #f72585 2px 2px 2px;
+    padding: 0px;
+    border-radius: 10px;
+}
+.redes div div span{
+    align-self: center;
+    font-size: 20px;
+    margin-left: 10px;
+    text-shadow: pink 2px 2px 2px;
+}
+
+.spanRedes{
+    font-family: "DancingScript-Bold";
+    font-size: 35px;
+    text-decoration-line: underline;
+    padding: 40px;
+    text-shadow: pink 2px 2px 2px;
+}
+
+iframe{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    justify-self: center;
+    padding-bottom: 20px;    
+}
+
+   
+/**************************************************/
+/*                     Footer                     */
+/**************************************************/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    font-family: "DancingScript-Regular";
+    text-align: right;
+    color: #f72585;
+    background-color: black;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+/*////////////////////////////////////////////////*/
+/*            Media Queries - Header              */
+/*////////////////////////////////////////////////*/
+
+
+@media screen and (max-width: 320px) {
+    h1{
+        font-family: "DancingScript-Bold";
+        background-color: black;
+        color: #f72585;
+        text-align: center;
+        font-size: 30px;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    
+    nav{
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+        row-gap: 5px;
+        background-color: #f72585;
+    }
+    
+    nav a{
+        font-size: 20px;
+        display: inline;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        align-self: center;
+    }
+/*////////////////////////////////////////////////*/
+/*             Media Queries - Index              */
+/*////////////////////////////////////////////////*/
+
+.logo{
+    height: 110px;
+    margin-bottom: 10px;
+    padding: 0;
+    border: none;
+}
+    
+.imgIndex img{
+    width: 100%;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.frase{
+    margin: 0;
+    width: 320px;
+    font-size: 20px;
+    color: black;
+}
+
+/*////////////////////////////////////////////////*/
+/*           Media Queries - Sobre Mi             */
+/*////////////////////////////////////////////////*/
+
+h3{
+    padding: 0;
+    margin: 0;
+}
+
+    .gridSobreMi{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-around;
+            
+    }
+    
+    .imgSobreMi1,.imgSobreMi2{
+        width: 300px; 
+        align-self: center;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    
+    .titulo1,.titulo2{
+        font-size: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .contenido parrafo1 p,.contenido parrafo2 p{
+        font-size: 20px;
+        margin-left: 20px;
+         
+    }
+
+/*////////////////////////////////////////////////*/
+/*            Media Queries - Galeria             */
+/*////////////////////////////////////////////////*/
+
+.galeryMU,.galeryColor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin-left: 30px;
+}
+.galeryMU h4,.galeryColor h4{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 30px;
+    text-align: center;   
+   }
+
+
+/*////////////////////////////////////////////////*/
+/*            Media Queries - Servicios            */
+/*////////////////////////////////////////////////*/
+
+.listaServicios article{
+    display: flex;
+   flex-direction: column;   
+}
+.galeriaMakeUpGrid{
+    display: inline-block;
+    text-align: center;     
+}
+.galeriaMakeUpGrid img,.divVideo video{
+   width: 300px;
+}
+.presupuestoTitulo{
+    margin: 0;
+    text-align: center;
+}
+.listaMakeUp p{
+    margin-left: 5px;
+}
+
+/*////////////////////////////////////////////////*/
+/*            Media Queries - Contacto            */
+/*////////////////////////////////////////////////*/
+
+
+    .imgFondo{
+        background-image: url("../img/mobileFondo.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .redes{
+        display: flex;
+        flex-direction: column;
+        margin-top: 115px;
+        margin-left: 10px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .spanRedes{
+        font-family: "DancingScript-Bold";
+        font-size: 25px;
+        text-decoration-line: underline;
+        padding: 10px;
+    }
+
+    .redes div div a img{
+        border: none;
+        height: 35px; 
+    }
+
+    .redes div div span{
+        align-self: center;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    iframe{
+        display: flex;
+        width: 150px;
+        height: 150px;
+        justify-self: center;
+        padding-bottom: 5px;    
+    }
+    
+/*////////////////////////////////////////////////*/
+/*             Media Queries - Footer             */
+/*////////////////////////////////////////////////*/
+
+    footer{
+        font-family: "DancingScript-Regular";
+        font-size: 10px;
+        text-align: right;
+        color: #f72585;
+        background-color: black;
+        margin-top: 10px;
+    }
+    
+}
+
+
