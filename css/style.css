@@ -5,7 +5,7 @@
 }
 
 /***********************************************************/
-/* Estilos de h1,h3,h4,body,imagenes para todas las paginas*/
+/* Estilos de h3,h4,body,imagenes para todas las paginas*/
 /***********************************************************/
 
 @font-face {
@@ -19,17 +19,6 @@
 @font-face {
     font-family: "Poppins";
     src: url("../fonts/Poppins-Light.ttf");
-}
-
-h1{
-    font-family: "DancingScript-Bold";
-    background-color: black;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: #f72585;
-    text-align: center;
-    font-size: 50px; 
-    margin-top: 0;
 }
 
 body{
@@ -52,6 +41,22 @@ h4{
     font-size: 20px;
 }
 
+.wapp{
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+}
+.wapp img{
+    border: none;
+    width: 70px;
+}
+.wapp img:hover{
+    transform: scale(1.2);
+    box-shadow: #f72585 2px 2px 2px;
+    padding: 0px;
+    margin: 0;
+    border-radius: 10px;
+}
 
         /* ----- Menu ----- */
 
@@ -94,8 +99,7 @@ nav div div div a{
 }
 
 nav div div div a:hover{
-    transform: scale(1.05);
-    background-color:pink;
+    transform: scale(1.2);
     transition: all 0.5s;
    
 }
@@ -202,27 +206,17 @@ nav div div div a:hover{
 /*                     Galeria                    */
 /**************************************************/
 
-.galeryComplited{
+.galeryMU{
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    min-height: 100vh;
-}
-.galeryMU,.galeryColor{
-    display: flex;
-    margin: 30px;
-    width: 700px;
-}
-
-.galeryMU h4,.galeryColor h4{
-    display: flex;
+    justify-self: center;
     align-items: center;
-    justify-content: center;
-    font-family: "DancingScript-Bold";
-    font-size: 50px;
-    margin-right: 30px;
-   }
+    margin: 30px;
+}
+.carousel-inner{
+    
+    width: 500px;
+}
 
 /**************************************************/
 /*                   Servicios                    */
@@ -388,13 +382,6 @@ footer{
 
 
 @media screen and (max-width: 320px) {
-    h1{
-        font-family: "DancingScript-Bold";
-        background-color: black;
-        color: #f72585;
-        text-align: center;
-        font-size: 30px;
-    }
     header{
         display: flex;
         flex-direction: column;
@@ -481,20 +468,18 @@ h3{
 /*            Media Queries - Galeria             */
 /*////////////////////////////////////////////////*/
 
-.galeryMU,.galeryColor{
+.galeryMU{
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    margin-left: 30px;
 }
-.galeryMU h4,.galeryColor h4{
-    display: flex;
-    justify-content: flex-start;
-    font-size: 30px;
-    text-align: center;   
-   }
+.carousel-inner{
+    
+    width: 320px;
+}
+
 
 
 /*////////////////////////////////////////////////*/
