@@ -1,0 +1,661 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/***********************************************************/
+/* Estilos de h3,h4,body,imagenes para todas las paginas*/
+/***********************************************************/
+
+@font-face {
+    font-family: "DancingScript-Bold";
+    src: url("../fonts/DancingScript-Bold.ttf");
+}
+
+$fuente-family:'DancingScript-Bold';
+$fondo: linear-gradient(pink, white,pink);
+$borde: 3px double darkmagenta;
+$colorFuenteNavBar: black;
+
+
+body{
+    background: $fondo;
+}
+
+img{
+    border: $borde;
+}
+
+h3{
+    font-family: $fuente-family;
+    text-align: center;
+    font-size: 35px;
+    text-decoration-line: underline;
+    padding-top: 20px;
+}
+
+/*     Menu     */
+
+nav{
+
+    font-family: $fuente-family;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .logo{
+        height: 100px;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    a{
+        color:$colorFuenteNavBar;
+        text-decoration: none;       
+    }
+    div{
+        div{
+            display: flex;
+            justify-content: flex-end;
+            a{
+                width: 130px;
+                height: 50px;
+                text-align: center;
+                margin-right: 30px;                
+            }
+            a:hover{
+                transform: scale(1.2);
+                transition: all 0.5s;
+               
+            }           
+        }
+    }
+}
+
+.wapp{
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 1;
+    img{
+        border: none;
+        width: 70px;
+        box-shadow: black 2px 2px 2px;
+        border-radius: 10px;
+    }
+    img:hover{
+        transform: scale(1.2);
+        box-shadow: #f72585 2px 2px 2px;
+        padding: 0px;
+        margin: 0;
+        border-radius: 10px;
+    }  
+}
+
+/**************************************************/
+/*                     Index                      */
+/**************************************************/
+
+.imgIndex{
+    text-align: center;
+}
+
+.frase{
+    width: 700px;
+    font-family: $fuente-family;
+    font-size: 35px;
+    text-shadow: darkmagenta 2px 2px 2px;
+    margin-left: 300px; 
+    text-align: center;  
+}
+
+/**************************************************/
+/*                   Sobre Mi                     */
+/**************************************************/
+
+.contenido{
+    .gridSobreMi{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2,2fr);
+        grid-template-rows: 30px 300px 30px 300px;
+        grid-template-areas: 
+        "title1 title1"
+        "foto1 parrafos1"
+        "title2 title2"
+        "parrafos2 foto2"
+        ; 
+        align-items: center;
+        
+        .titulo1{
+            grid-area: title1;
+            padding-bottom: 50px;
+            font-size: 30px;
+        }
+
+        .imgSobreMi1{
+            grid-area: foto1;
+            width: 400px;
+            justify-self: center;
+            animation-name: animacionImgSobreMi;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+           
+        }
+
+        .parrafo1{
+            grid-area: parrafos1;
+            margin-right: 50px;
+            font-size: 25px;
+        }
+
+        .titulo2{
+            grid-area: title2;
+            padding-top: 100px;
+            font-size: 30px;
+        }
+
+        .imgSobreMi2{
+            grid-area: foto2;
+            width: 400px;
+            justify-self: center;
+            animation-name: animacionImgSobreMi;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+            margin-bottom: 30px;
+            
+        }
+
+        .parrafo2{
+            grid-area: parrafos2;
+            padding-right: 50px;
+            font-size: 25px;
+            
+        }      
+    }
+
+}
+@keyframes animacionImgSobreMi {
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);        
+    }
+    
+}
+
+/**************************************************/
+/*                     Galeria                    */
+/**************************************************/
+
+.galery{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    margin: 30px;
+    
+    .carousel-inner{
+    
+        width: 500px;
+    }
+}
+
+/**************************************************/
+/*                   Servicios                    */
+/**************************************************/
+
+.listaServicios{
+    article{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-areas:
+        "gridTexto1 fotoGrid"
+        "gridVideo gridPresupuesto"
+        ;
+        gap: 10px;
+        margin: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+        
+        .textoGrid1{
+            grid-area: gridTexto1;
+            h4{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+        
+        .gridImg{
+            grid-area: fotoGrid;
+            width: 300px;
+            justify-self: center;
+        }
+
+        .presupuestoGrid{
+            grid-area: gridPresupuesto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h4{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            .presupuestoTitulo{
+                margin-top: 50px;
+                margin-bottom: 25px;
+                margin-left: 120px;
+            }
+        }
+        table{
+            tr{
+                th{
+                    text-align: center;
+                    td{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        
+        .videoGrid{
+            grid-area: gridVideo;
+            width: 300px;
+            justify-self: center;
+        }
+    }
+}
+
+section{
+    .listaMakeUp{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h4{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        p{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .galeriaMakeUpGrid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px; 
+            margin-bottom: 30px; 
+
+            img{
+                width: 350px;
+            }
+
+            img:hover{
+                transform: scale(1.1);
+                transition: 0.5s;
+            }
+        
+        }
+    }
+}
+
+/**************************************************/
+/*                    Contacto                    */
+/**************************************************/
+
+.imgFondo{
+    background-image: url("../img/Salon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    text-align: center;
+
+    .redes{
+        display: flex;
+        flex-direction: column;
+        margin-top: 350px;
+        margin-left: 20px;
+        gap: 20px;
+        width: 70%;
+
+        div{
+            display: grid;
+            grid-template-columns: 100%;
+
+            .spanRedes{
+                font-family: "DancingScript-Bold";
+                font-size: 35px;
+                text-decoration-line: underline;
+                padding: 40px;
+                text-shadow: pink 2px 2px 2px;
+            }
+
+            div{
+                display: flex;
+                justify-content: center;
+
+                a{
+                    img{
+                        border: none;
+                        height: 50px; 
+                    }
+                    img:hover{
+                        transform: scale(1.2);
+                        box-shadow: #f72585 2px 2px 2px;
+                        padding: 0px;
+                        border-radius: 10px;
+                    }
+                }
+                span{
+                    align-self: center;
+                    font-size: 20px;
+                    margin-left: 10px;
+                    text-shadow: pink 2px 2px 2px;
+                }
+            }
+        }
+        iframe{
+            display: flex;
+            width: 300px;
+            height: 300px;
+            justify-self: center;
+            padding-bottom: 20px;    
+        }
+    }
+}
+
+/**************************************************/
+/*                     Footer                     */
+/**************************************************/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    font-family: $fuente-family;
+    text-align: right;
+    color: #f72585;
+    background-color: black;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+/*////////////////////////////////////////////////*/
+/*            Media Queries - Header              */
+/*////////////////////////////////////////////////*/
+
+
+@media screen and (max-width: 320px){
+    header{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        nav{
+            display: grid;
+            grid-template-columns: 100%;
+            justify-content: center;
+            row-gap: 5px;
+            background-color: #f72585;
+
+            .logo{
+                height: 110px;
+                margin-bottom: 10px;
+                padding: 0;
+                border: none;
+            }
+            div{
+                div{
+                    div{
+                        a{
+                            font-size: 20px;
+                            display: inline;
+                            color: black;
+                            text-align: center;
+                            text-decoration: none;
+                            align-self: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .wapp{
+        img{
+            width: 40px;
+        }
+    }
+
+
+/*////////////////////////////////////////////////*/
+/*             Media Queries - Index              */
+/*////////////////////////////////////////////////*/
+
+.imgIndex{
+    img{
+        width: 100%;
+        margin-top: 10px;
+        padding: 0;
+    }
+}
+
+.frase{
+    margin: 0;
+    width: 320px;
+    font-size: 20px;
+    color: black;
+}
+
+/*////////////////////////////////////////////////*/
+/*           Media Queries - Sobre Mi             */
+/*////////////////////////////////////////////////*/
+
+h3{
+    padding: 0;
+    margin: 0;
+}
+
+.contenido{
+    .gridSobreMi{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-around;
+        
+        .imgSobreMi1{
+            width: 300px; 
+            align-self: center;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            animation-name: animacionImgSobreMi;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        .imgSobreMi2{
+            width: 300px; 
+            align-self: center;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            animation-name: animacionImgSobreMi;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        .titulo1{
+            font-size: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .titulo2{
+            font-size: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .parrafo1{
+            p{
+                font-size: 20px;
+                margin-left: 20px;   
+            }
+        }
+        .parrafo2{
+            p{
+                font-size: 20px;
+                margin-left: 20px;   
+            }
+        }
+    }
+}
+@keyframes animacionImgSobreMi {
+    0%{
+        transform: scale(1)
+    }
+    50%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);        
+    }
+    
+}
+
+/*////////////////////////////////////////////////*/
+/*            Media Queries - Galeria             */
+/*////////////////////////////////////////////////*/
+
+.galery{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .carousel-inner{
+        width: 320px;
+    }
+}
+
+/*////////////////////////////////////////////////*/
+/*            Media Queries - Servicios            */
+/*////////////////////////////////////////////////*/
+
+.listaServicios{
+    article{
+        display: flex;
+        flex-direction: column;
+        
+        .presupuestoGrid{
+            .presupuestoTitulo{
+                margin: 0;
+                text-align: center;
+            }        
+        }
+        .videoGrid{
+            width: 300px;
+        }
+    }
+}
+
+section{
+    .listaMakeUp{
+        .galeriaMakeUpGrid{
+            display: inline-block;
+            text-align: center; 
+            img{
+                width: 300px;
+                margin-top:5px;
+             }
+        }
+        p{
+            margin-left: 5px;
+        }
+        .divVideo{
+            video{
+                width: 300px;
+            }
+            
+        }
+        
+    }
+}
+    
+/*////////////////////////////////////////////////*/
+/*            Media Queries - Contacto            */
+/*////////////////////////////////////////////////*/
+
+.imgFondo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../img/mobileFondo.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    .redes{
+        margin-top: 115px;
+        margin-left: 0;
+        padding: 0;
+        width: 100%;
+
+        div{
+            .spanRedes{
+                font-family:$fuente-family;
+                font-size: 25px;
+                text-shadow: pink 2px 2px 2px;
+                padding: 0;
+            }
+            div{
+                display: inline;
+                a{
+                    img{
+                        border: none;
+                        height: 35px; 
+                    }
+                }
+                span{
+                    align-self: center;
+                    font-size: 15px;
+                    margin: 0;
+                    text-shadow: pink 2px 2px 2px;
+    
+                }
+            
+            }
+            iframe{
+                display:flex;
+                width: 100px;
+                height: 100px;
+                justify-self: center;
+                align-self: center;
+                padding-bottom: 5px;      
+            } 
+        }
+    }
+    
+}
+
+/*////////////////////////////////////////////////*/
+/*             Media Queries - Footer             */
+/*////////////////////////////////////////////////*/
+
+footer{
+    font-family: $fuente-family;
+    font-size: 10px;
+    text-align: right;
+    color: #f72585;
+    background-color: black;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+}

@@ -73,6 +73,7 @@ header{
 }
 
 nav{
+    
     font-family: "DancingScript-Bold";
     font-size: 30px;
     margin-top: 10px;
@@ -252,7 +253,7 @@ nav div div div a:hover{
     justify-self: center;
 }
 
-.textoGrid1 h4,.textoGrid2 h4,.presupuestoGrid h4{
+.textoGrid1 h4,.presupuestoGrid h4{
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -404,16 +405,19 @@ footer{
         text-decoration: none;
         align-self: center;
     }
+
+    .logo{
+        height: 110px;
+        margin-bottom: 10px;
+        padding: 0;
+        border: none;
+    }
+
 /*////////////////////////////////////////////////*/
 /*             Media Queries - Index              */
 /*////////////////////////////////////////////////*/
 
-.logo{
-    height: 110px;
-    margin-bottom: 10px;
-    padding: 0;
-    border: none;
-}
+
     
 .imgIndex img{
     width: 100%;
@@ -494,7 +498,7 @@ h3{
     display: inline-block;
     text-align: center;     
 }
-.galeriaMakeUpGrid img,.divVideo video{
+.galeriaMakeUpGrid img, video{
    width: 300px;
 }
 .presupuestoTitulo{
