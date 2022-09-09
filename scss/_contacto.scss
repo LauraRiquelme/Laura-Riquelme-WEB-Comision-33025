@@ -1,0 +1,123 @@
+$sombras:(
+    rosa: darkmagenta,
+   verde: green
+);
+
+@each $item, $color in $sombras{
+    .sombra-#{$item}{
+        box-shadow: $color 2px 2px 2px;
+        border-radius: 10px;
+        border: none;
+        height: 50px; 
+    }
+
+}
+
+.imgFondo{
+    background-image: url("../img/Salon.jpg");
+    background-size: map-get($multiUsoMapGet,cobertura);
+    background-repeat: map-get($multiUsoMapGet,repeticion);
+    justify-content: map-get($multiUsoMapGet,centro);
+    text-align: map-get($multiUsoMapGet,centro);
+
+    .redes{
+        @include flexible();
+        margin-top: 350px;
+        margin-left: 20px;
+        gap: 20px;
+        width: 70%;
+
+        div{
+            display: grid;
+            grid-template-columns: 100%;
+
+            .spanRedes{
+                font-family: "DancingScript-Bold";
+                font-size: 35px;
+                text-decoration-line: underline;
+                padding: 40px;
+                text-shadow: pink 2px 2px 2px;
+            }
+
+            div{
+                display: flex;
+                justify-content:map-get($multiUsoMapGet,centro);
+
+                a{
+                    img:hover{
+                        @include transformTransition(1.2,0.5s);
+                        box-shadow: #f72585 2px 2px 2px;
+                        padding: 0px;
+                        border-radius: 10px;
+                    }
+                }
+                span{
+                    align-self: map-get($multiUsoMapGet,centro);
+                    font-size: 20px;
+                    margin-left: 10px;
+                    text-shadow: pink 2px 2px 2px;
+                }
+            }
+        }
+        iframe{
+            display: flex;
+            width: 300px;
+            height: 300px;
+            justify-self: map-get($multiUsoMapGet,centro);
+            padding-bottom: 20px;    
+        }
+    }
+}
+
+@media screen and (max-width: 320px){
+    
+.imgFondo{
+    @include flexible();
+    justify-content: map-get($multiUsoMapGet,centro);
+    background-image: url("../img/mobileFondo.jpg");
+    background-size: 100%;
+    background-repeat: map-get($multiUsoMapGet,repeticion);
+
+    .redes{
+        margin-top: 115px;
+        margin-left: 0;
+        padding: 0;
+        width: 100%;
+
+        div{
+            .spanRedes{
+                font-family:$fuente-family;
+                font-size: 25px;
+                text-shadow: pink 2px 2px 2px;
+                padding: 0;
+            }
+            div{
+                display: inline;
+                a{
+                    img{
+                        border: none;
+                        height: 35px; 
+                    }
+                }
+                span{
+                    align-self: map-get($multiUsoMapGet,centro);
+                    font-size: 15px;
+                    margin: 0;
+                    text-shadow: pink 2px 2px 2px;
+    
+                }
+            
+            }
+            iframe{
+                display:flex;
+                width: 100px;
+                height: 100px;
+                justify-self: map-get($multiUsoMapGet,centro);
+                align-self: map-get($multiUsoMapGet,centro);;
+                padding-bottom: 5px;      
+            } 
+        }
+    }
+    
+}
+}

@@ -1,0 +1,22 @@
+.galery{
+    @include flexible();
+    justify-self: center;
+    align-items: center;
+    margin: 30px;
+    
+    .carousel-inner{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .galery{
+        @include flexible();
+        align-items: center;
+        justify-content: center;
+    
+        .carousel-inner{
+            width: 320px;
+        }
+    }
+}

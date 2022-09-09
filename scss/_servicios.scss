@@ -1,0 +1,134 @@
+
+.listaServicios{
+    article{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-areas:
+        "gridTexto1 fotoGrid"
+        "gridVideo gridPresupuesto"
+        ;
+        gap: 10px;
+        margin: 10px;
+        margin-bottom: 20px;
+        text-align:map-get($multiUsoMapGet,centro);
+        
+        .textoGrid1{
+            grid-area: gridTexto1;
+            h4{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+        
+        .gridImg{
+            grid-area: fotoGrid;
+            width: 300px;
+            justify-self: map-get($multiUsoMapGet,centro);
+        }
+
+        .presupuestoGrid{
+            grid-area: gridPresupuesto;
+            @include flexible();
+            align-items: map-get($multiUsoMapGet,centro);
+
+            h4{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            .presupuestoTitulo{
+                margin-top: 50px;
+                margin-bottom: 25px;
+                margin-left: 120px;
+            }
+        }
+        table{
+            tr{
+                th{
+                    text-align: map-get($multiUsoMapGet,centro);
+                    td{
+                        text-align: map-get($multiUsoMapGet,centro);
+                    }
+                }
+            }
+        }
+        
+        .videoGrid{
+            grid-area: gridVideo;
+            width: 300px;
+            justify-self: map-get($multiUsoMapGet,centro);
+        }
+    }
+}
+
+section{
+    .listaMakeUp{
+        @include flexible();
+        align-items: map-get($multiUsoMapGet,centro);
+
+        .h4Pad{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        p{
+            @extend .h4Pad;
+        }
+
+        .galeriaMakeUpGrid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px; 
+            margin-bottom: 30px; 
+
+            img{
+                width: 350px;
+            }
+
+            img:hover{
+                @include transformTransition(1.1,0.5s)
+            }
+        
+        }
+    }
+}
+@media screen and (max-width: 320px){
+    
+.listaServicios{
+    article{
+        @include flexible();
+        
+        .presupuestoGrid{
+            .presupuestoTitulo{
+                margin: 0;
+                text-align: map-get($multiUsoMapGet,centro);
+            }        
+        }
+        .videoGrid{
+            width: 300px;
+        }
+    }
+}
+
+section{
+    .listaMakeUp{
+        .galeriaMakeUpGrid{
+            display: inline-block;
+            text-align: map-get($multiUsoMapGet,centro);
+            img{
+                width: 300px;
+                margin-top:5px;
+             }
+        }
+        p{
+            margin-left: 5px;
+        }
+        .divVideo{
+            video{
+                width: 300px;
+            }
+            
+        }
+        
+    }
+}
+}

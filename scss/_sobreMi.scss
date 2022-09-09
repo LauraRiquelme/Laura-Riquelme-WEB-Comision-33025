@@ -1,0 +1,142 @@
+@mixin anima {
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+.contenido{
+    .gridSobreMi{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2,2fr);
+        grid-template-rows: 30px 300px 30px 300px;
+        grid-template-areas: 
+        "title1 title1"
+        "foto1 parrafos1"
+        "title2 title2"
+        "parrafos2 foto2"
+        ; 
+        align-items: map-get($multiUsoMapGet,centro);
+        
+        .titulo1{
+            grid-area: title1;
+            padding-bottom: 50px;
+            font-size: 30px;
+        }
+
+        .imgSobreMi1{
+            grid-area: foto1;
+            width: 400px;
+            justify-self:map-get($multiUsoMapGet,centro);
+            animation-name: animacionImgSobreMi;
+            @include anima();
+           
+        }
+
+        .parrafo1{
+            grid-area: parrafos1;
+            margin-right: 50px;
+            font-size: 25px;
+        }
+
+        .titulo2{
+            grid-area: title2;
+            padding-top: 100px;
+            font-size: 30px;
+        }
+
+        .imgSobreMi2{
+            grid-area: foto2;
+            width: 400px;
+            justify-self:map-get($multiUsoMapGet,centro);
+            animation-name: animacionImgSobreMi;
+            @include anima();
+            margin-bottom: 30px;
+            
+        }
+
+        .parrafo2{
+            grid-area: parrafos2;
+            padding-right: 50px;
+            font-size: 25px;
+            
+        }      
+    }
+
+}
+@keyframes animacionImgSobreMi {
+    50%{
+        @include transformTransition(1.2,0s);
+    }
+    100%{
+        @include transformTransition(1,0s);       
+    }
+    
+}
+@media screen and (max-width: 320px){
+    h1{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .contenido{
+        .gridSobreMi{
+            display: flex;
+            flex-direction: column;
+            justify-content: map-get($multiUsoMapGet,centro);
+            justify-content: space-around;
+            
+            .imgSobreMi1{
+                width: 300px; 
+                align-self: center;
+                margin-top: 25px;
+                margin-bottom: 15px;
+                animation-name: animacionImgSobreMi;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            .imgSobreMi2{
+                width: 300px; 
+                align-self: map-get($multiUsoMapGet,centro);
+                margin-top: 25px;
+                margin-bottom: 15px;
+                animation-name: animacionImgSobreMi;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            .titulo1{
+                font-size: 25px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .titulo2{
+                font-size: 25px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .parrafo1{
+                p{
+                    font-size: 20px;
+                    margin-left: 20px;   
+                }
+            }
+            .parrafo2{
+                p{
+                    font-size: 20px;
+                    margin-left: 20px;   
+                }
+            }
+        }
+    }
+    @keyframes animacionImgSobreMi {
+        0%{
+            @include transformTransition(1,0.5s);
+        }
+        50%{
+            @include transformTransition(0.9,0.5s);
+        }
+        100%{
+            @include transformTransition(1,0.5s);       
+        }
+        
+    }
+}

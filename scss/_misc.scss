@@ -1,0 +1,71 @@
+body{
+    background: $fondo;
+}
+
+img{
+    border: $borde;
+}
+
+h1{
+    font-family: $fuente-family;
+    text-align: center;
+    font-size: 35px;
+    text-decoration-line: underline;
+    padding-top: 20px;
+}
+
+.wapp{
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 1;
+    img{
+        border: none;
+        width: 70px;
+        box-shadow: black 2px 2px 2px;
+        border-radius: 10px;
+    }
+    img:hover{
+        @include transformTransition(1.2,0.5s);
+        box-shadow: #f72585 2px 2px 2px;
+        padding: 0px;
+        margin: 0;
+        border-radius: 10px;
+    }  
+}
+
+footer{
+    
+    @include flexible();
+    font-family: $fuente-family;
+    text-align: right;
+    color: #f72585;
+    background-color: black;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 320px){
+    header{
+        @include flexible();
+        margin-bottom: 10px;
+    }
+
+    .wapp{
+        img{
+            width: 40px;
+        }
+    }
+
+footer{
+    font-family: $fuente-family;
+    font-size: 10px;
+    text-align: right;
+    color: #f72585;
+    background-color: black;
+    margin-top: 10px;
+}
+
+}

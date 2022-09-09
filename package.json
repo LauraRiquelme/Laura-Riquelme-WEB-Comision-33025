@@ -1,10 +1,6 @@
 {
   "name": "laura-riquelme-web-comision-33025",
   "version": "1.0.0",
-<<<<<<< HEAD
-  "description": "",
-=======
->>>>>>> 5a0ed76 (Aplicando SASS)
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,10 +17,7 @@
     "url": "https://github.com/LauraRiquelme/Laura-Riquelme-WEB-comision-33025/issues"
   },
   "homepage": "https://github.com/LauraRiquelme/Laura-Riquelme-WEB-comision-33025#readme",
-<<<<<<< HEAD
-=======
   "description": "",
->>>>>>> 5a0ed76 (Aplicando SASS)
   "dependencies": {
     "node-sass": "^7.0.1"
   }

@@ -1,0 +1,34 @@
+En style.scss:
+
+	Coloque un @mixin transformTransition
+	y otro @mixin flexible
+	defini un mapget, multiUsoMapGet
+
+y lo separe e importe los archivos:
+
+_navbar:
+	use @mixin transformTransition;	
+
+_index
+
+_sobreMi:
+	defini @mixin anima (tiene variable de una animacion)
+	use multiUsoMapGet 
+
+_galeria:
+	Use @mixin flexible
+
+_servicios:
+	use multiUsoMapGet
+	use @mixin flexible
+
+	use @extend .h4Pad;
+
+_contacto:
+	use multiUsoMapGet
+	use @mixin flexible
+
+	defini un map, sombras (modifica las sombras de los iconos de contacto)
+
+_misc: agrupa header, body, borde de imagenes, h1, icono wapp pegado footer
+	use @mixin flexible

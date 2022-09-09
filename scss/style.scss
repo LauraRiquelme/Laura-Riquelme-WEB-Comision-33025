@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "DancingScript-Bold";
+    src: url("../fonts/DancingScript-Bold.ttf");
+} 
+
+@mixin transformTransition($escala,$tiempo) {
+    transform: scale($escala);
+    transition: $tiempo;    
+}
+@mixin flexible {
+    display: flex;
+    flex-direction: column;
+}
+
+$multiUsoMapGet:(
+    cobertura: cover,
+    repeticion: no-repeat,
+    centro: center,
+);
+
+
+$fuente-family:'DancingScript-Bold';
+$fondo: linear-gradient(pink, white,pink);
+$borde: 3px double darkmagenta;
+$colorFuenteNavBar: black;
+
+
+@import "navbar";
+@import "index";
+@import "sobreMi";
+@import "galeria";
+@import "servicios";
+@import "contacto";
+@import "misc"
