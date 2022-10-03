@@ -47,6 +47,7 @@ footer{
     margin-top: 10px;
 }
 
+
 .widget_blog_subscription { 
     display: flex;  
     justify-content: center;
@@ -70,8 +71,24 @@ footer{
     }
 }
 
+.gracias{
+    h1{
+        padding: 40px;
 
-@media screen and (max-width: 320px){
+    }
+    div{
+        display: flex;
+        justify-content: center;;
+        img{
+            width: 300px;
+            border-radius: 150px;
+            margin-bottom: 30px;
+        }
+    }   
+}
+
+
+@media screen and (max-width: 360px){
     header{
         @include flexible();
         margin-bottom: 10px;
@@ -101,6 +118,20 @@ footer{
         }
     }
 
+
+    .gracias{
+        
+        div{
+            display: flex;
+            justify-content: center;;
+            img{
+                width: 200px;
+                border: none;
+                border-radius: 100px;
+                margin-bottom: 30px;
+            }
+        }   
+    }
 
 
 footer{

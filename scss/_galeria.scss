@@ -5,18 +5,18 @@
     margin: 30px;
     
     .carousel-inner{
-        width: 500px;
+        width: 450px;
     }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 360px){
     .galery{
         @include flexible();
         align-items: center;
         justify-content: center;
     
         .carousel-inner{
-            width: 320px;
+            width: 350px;
         }
     }
 }

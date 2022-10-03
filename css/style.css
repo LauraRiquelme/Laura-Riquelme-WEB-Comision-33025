@@ -40,7 +40,7 @@ nav {
       transform: scale(1.2);
       transition: 0.5s; }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   nav {
     display: grid;
     grid-template-columns: 100%;
@@ -60,38 +60,43 @@ nav {
       align-self: center; } }
 
 .imgIndex {
-  text-align: center; }
+  width: 100%;
+  height: 483px;
+  background-image: url("../img/01 index.jpg"); }
 
-.frase {
-  width: 700px;
-  font-family: "DancingScript-Bold";
-  font-size: 35px;
-  text-shadow: darkmagenta 2px 2px 2px;
-  margin-left: 300px;
-  text-align: center; }
+article {
+  display: flex;
+  justify-content: center; }
+  article .frase {
+    width: 800px;
+    font-family: "DancingScript-Bold";
+    font-size: 35px;
+    text-shadow: darkmagenta 2px 2px 2px;
+    margin-top: 15px;
+    text-align: center; }
 
-@media screen and (max-width: 320px) {
-  .imgIndex img {
+@media screen and (max-width: 360px) {
+  .imgIndex {
     width: 100%;
-    margin-top: 10px;
-    padding: 0; }
-  .frase {
+    height: 232px;
+    background-image: url("../img/01 index 2.jpg"); }
+  article .frase {
     margin: 0;
     width: 320px;
-    font-size: 20px;
+    font-size: 25px;
     color: black; } }
 
 .contenido .gridSobreMi {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(2, 2fr);
-  grid-template-rows: 30px 300px 30px 300px;
-  grid-template-areas: "title1 title1" "foto1 parrafos1" "title2 title2" "parrafos2 foto2";
+  grid-template-areas: "title1 title1" "foto1 parrafo1" "title2 title2" "parrafo2 foto2";
   align-items: center; }
   .contenido .gridSobreMi .titulo1 {
     grid-area: title1;
     padding-bottom: 50px;
-    font-size: 30px; }
+    font-size: 30px;
+    margin-left: 180px; }
   .contenido .gridSobreMi .imgSobreMi1 {
     grid-area: foto1;
     width: 400px;
@@ -101,13 +106,15 @@ nav {
     animation-iteration-count: infinite;
     animation-delay: 1s; }
   .contenido .gridSobreMi .parrafo1 {
-    grid-area: parrafos1;
+    grid-area: parrafo1;
     margin-right: 50px;
-    font-size: 25px; }
+    font-size: 20px;
+    text-align: center; }
   .contenido .gridSobreMi .titulo2 {
     grid-area: title2;
     padding-top: 100px;
-    font-size: 30px; }
+    font-size: 30px;
+    margin-left: 110px; }
   .contenido .gridSobreMi .imgSobreMi2 {
     grid-area: foto2;
     width: 400px;
@@ -118,9 +125,10 @@ nav {
     animation-delay: 1s;
     margin-bottom: 30px; }
   .contenido .gridSobreMi .parrafo2 {
-    grid-area: parrafos2;
-    padding-right: 50px;
-    font-size: 25px; }
+    grid-area: parrafo2;
+    margin-left: 50px;
+    font-size: 20px;
+    text-align: center; }
 
 @keyframes animacionImgSobreMi {
   50% {
@@ -130,7 +138,7 @@ nav {
     transform: scale(1);
     transition: 0s; } }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   h1 {
     padding: 0;
     margin: 0; }
@@ -158,17 +166,20 @@ nav {
     .contenido .gridSobreMi .titulo1 {
       font-size: 25px;
       padding-top: 10px;
-      padding-bottom: 10px; }
+      padding-bottom: 10px;
+      margin-left: 0; }
     .contenido .gridSobreMi .titulo2 {
       font-size: 25px;
       padding-top: 10px;
-      padding-bottom: 10px; }
+      padding-bottom: 10px;
+      margin-left: 10px;
+      text-align: center; }
     .contenido .gridSobreMi .parrafo1 p {
-      font-size: 20px;
-      margin-left: 20px; }
+      font-size: 15px;
+      margin-left: 45px; }
     .contenido .gridSobreMi .parrafo2 p {
-      font-size: 20px;
-      margin-left: 20px; }
+      font-size: 15px;
+      margin-right: 45px; }
   @keyframes animacionImgSobreMi {
     0% {
       transform: scale(1);
@@ -187,16 +198,16 @@ nav {
   align-items: center;
   margin: 30px; }
   .galery .carousel-inner {
-    width: 500px; }
+    width: 450px; }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   .galery {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
     .galery .carousel-inner {
-      width: 320px; } }
+      width: 350px; } }
 
 .listaServicios article {
   display: grid;
@@ -213,7 +224,7 @@ nav {
       padding-bottom: 15px; }
   .listaServicios article .gridImg {
     grid-area: fotoGrid;
-    width: 300px;
+    width: 400px;
     justify-self: center; }
   .listaServicios article .presupuestoGrid {
     grid-area: gridPresupuesto;
@@ -224,16 +235,17 @@ nav {
       padding-top: 15px;
       padding-bottom: 15px; }
     .listaServicios article .presupuestoGrid .presupuestoTitulo {
+      display: flex;
+      justify-content: center;
       margin-top: 50px;
-      margin-bottom: 25px;
-      margin-left: 120px; }
+      margin-bottom: 25px; }
   .listaServicios article table tr th {
     text-align: center; }
     .listaServicios article table tr th td {
       text-align: center; }
   .listaServicios article .videoGrid {
     grid-area: gridVideo;
-    width: 300px;
+    width: 400px;
     justify-self: center; }
 
 section .listaMakeUp {
@@ -244,36 +256,32 @@ section .listaMakeUp {
     padding-top: 20px;
     padding-bottom: 20px; }
   section .listaMakeUp .galeriaMakeUpGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 30px; }
+    gap: 10px; }
     section .listaMakeUp .galeriaMakeUpGrid img {
       width: 350px; }
     section .listaMakeUp .galeriaMakeUpGrid img:hover {
       transform: scale(1.1);
       transition: 0.5s; }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   .listaServicios article {
     display: flex;
     flex-direction: column; }
+    .listaServicios article .gridImg {
+      width: 340px; }
     .listaServicios article .presupuestoGrid .presupuestoTitulo {
       margin: 0;
       text-align: center; }
     .listaServicios article .videoGrid {
-      width: 300px;
-      margin-top: 50px; }
+      width: 340px; }
   section .listaMakeUp .galeriaMakeUpGrid {
-    display: inline-block;
-    text-align: center; }
-    section .listaMakeUp .galeriaMakeUpGrid img {
-      width: 300px;
-      margin-top: 5px; }
-  section .listaMakeUp p {
     margin-left: 5px; }
-  section .listaMakeUp .divVideo video {
-    width: 300px; } }
+    section .listaMakeUp .galeriaMakeUpGrid img {
+      padding-bottom: 5px; }
+  section .listaMakeUp div .videoClase {
+    width: 345px; }
+  section .listaMakeUp p {
+    text-align: center; } }
 
 .sombra-rosa {
   box-shadow: darkmagenta 2px 2px 2px;
@@ -330,7 +338,7 @@ section .listaMakeUp {
       justify-self: center;
       padding-bottom: 20px; }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   .imgFondo {
     display: flex;
     flex-direction: column;
@@ -370,7 +378,7 @@ body {
   background: linear-gradient(white, pink, white); }
 
 img {
-  border: 3px double darkmagenta; }
+  border: none; }
 
 h1 {
   font-family: "DancingScript-Bold";
@@ -427,7 +435,18 @@ footer {
       text-shadow: 2px 2px 2px white;
       text-align: center; }
 
-@media screen and (max-width: 320px) {
+.gracias h1 {
+  padding: 40px; }
+
+.gracias div {
+  display: flex;
+  justify-content: center; }
+  .gracias div img {
+    width: 300px;
+    border-radius: 150px;
+    margin-bottom: 30px; }
+
+@media screen and (max-width: 360px) {
   header {
     display: flex;
     flex-direction: column;
@@ -447,6 +466,14 @@ footer {
         font-size: 20px;
         text-shadow: 2px 2px 2px white;
         text-align: center; }
+  .gracias div {
+    display: flex;
+    justify-content: center; }
+    .gracias div img {
+      width: 200px;
+      border: none;
+      border-radius: 100px;
+      margin-bottom: 30px; }
   footer {
     font-family: "DancingScript-Bold";
     font-size: 12px;

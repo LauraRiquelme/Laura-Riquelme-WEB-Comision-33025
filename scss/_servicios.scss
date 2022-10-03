@@ -22,7 +22,7 @@
         
         .gridImg{
             grid-area: fotoGrid;
-            width: 300px;
+            width: 400px;
             justify-self: map-get($multiUsoMapGet,centro);
         }
 
@@ -37,9 +37,11 @@
             }
 
             .presupuestoTitulo{
+                display: flex;
+                justify-content: center;
                 margin-top: 50px;
                 margin-bottom: 25px;
-                margin-left: 120px;
+                
             }
         }
         table{
@@ -55,7 +57,7 @@
         
         .videoGrid{
             grid-area: gridVideo;
-            width: 300px;
+            width: 400px;
             justify-self: map-get($multiUsoMapGet,centro);
         }
     }
@@ -74,11 +76,8 @@ section{
             @extend .h4Pad;
         }
 
-        .galeriaMakeUpGrid{
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 10px; 
-            margin-bottom: 30px; 
+        .galeriaMakeUpGrid{ 
+            gap: 10px;
 
             img{
                 width: 350px;
@@ -89,14 +88,23 @@ section{
             }
         
         }
+        
+        
     }
+       
+    
 }
-@media screen and (max-width: 320px){
+
+@media screen and (max-width: 360px){
     
 .listaServicios{
     article{
         @include flexible();
+
+        .gridImg{
+            width: 340px;
         
+        }
         .presupuestoGrid{
             .presupuestoTitulo{
                 margin: 0;
@@ -104,30 +112,30 @@ section{
             }        
         }
         .videoGrid{
-            width: 300px;
+            width: 340px;
     }
+}
 }
 
 section{
     .listaMakeUp{
         .galeriaMakeUpGrid{
-            display: inline-block;
-            text-align: map-get($multiUsoMapGet,centro);
+            margin-left: 5px;
             img{
-                width: 300px;
-                margin-top:5px;
-             }
+                padding-bottom: 5px;
+            }
+        }
+        div{
+            .videoClase{
+                width: 345px;
+            }
         }
         p{
-            margin-left: 5px;
-        }
-        .divVideo{
-            video{
-                width: 300px;
-            }
-            
+            text-align: center;
         }
         
-    }
+        }
 }
+    
+  
 }
