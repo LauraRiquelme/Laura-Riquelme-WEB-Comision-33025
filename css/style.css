@@ -414,8 +414,9 @@ footer {
   background-color: black;
   padding-right: 30px;
   padding-top: 10px;
-  padding-bottom: 10px;
   margin-top: 10px; }
+  footer p {
+    text-align: center; }
 
 .widget_blog_subscription {
   display: flex;
@@ -481,3 +482,55 @@ footer {
     color: #f72585;
     background-color: black;
     margin-top: 10px; } }
+
+.bodyContacto {
+  background-image: url("../img/mifondo.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .bodyContacto .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    height: 500px;
+    margin-top: 50px;
+    border: solid darkslateblue 3px;
+    border-radius: 40px;
+    background-color: #bbd0ff; }
+    .bodyContacto .contenedor .fraseContacto p {
+      font-size: 20px;
+      text-align: center;
+      margin-left: 20px;
+      margin-right: 20px; }
+    .bodyContacto .contenedor .formulario {
+      width: 400px;
+      text-align: center; }
+  .bodyContacto a {
+    text-decoration: none;
+    color: black; }
+    .bodyContacto a .logoVuelta {
+      width: 150px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      border: solid darkmagenta 2px;
+      border-radius: 20px; }
+
+.contenedor2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  height: 200px;
+  margin-top: 140px;
+  border: solid darkslateblue 3px;
+  border-radius: 40px;
+  background-color: #bbd0ff; }
+  .contenedor2 .agradecimiento {
+    text-align: center; }

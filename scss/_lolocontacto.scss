@@ -1,0 +1,66 @@
+.bodyContacto{
+    background-image: url("../img/mifondo.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+.contenedor{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+    width: 600px;
+    height: 500px;
+    margin-top: 50px;
+    border: solid darkslateblue 3px;
+    border-radius: 40px;
+    background-color: #bbd0ff;
+    
+    .fraseContacto{
+        p{
+            font-size: 20px;
+            text-align: center;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+    .formulario{
+        width: 400px;
+        text-align: center;
+        
+    }
+
+}
+a{
+    text-decoration: none;
+    color: black;
+    .logoVuelta{
+        width: 150px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        border: solid darkmagenta 2px;
+        border-radius: 20px;
+    }
+}
+}
+.contenedor2{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+    width: 400px;
+    height: 200px;
+    margin-top: 140px;
+    border: solid darkslateblue 3px;
+    border-radius: 40px;
+    background-color: #bbd0ff;
+    .agradecimiento{
+        text-align: center;
+    }
+    
+
+}
